@@ -48,7 +48,7 @@ function App() {
       <section>
         <h2>Projetos</h2>
         {loading ? (
-          <p>Loading...</p>
+          <p>Carregando...</p>
         ) : (
           data.getProjects.map((project: ProjectObj) => (
             <Project key={project.id} {...project} />
