@@ -40,7 +40,7 @@ function App() {
         <h2>Sobre mim</h2>
         <About
           age={22}
-          description="Desenvolvedores profissionais em diversas tecnologias, como o Scratch, TypeScript etc. por mais de 5 anos."
+          description="Desenvolvedores profissionais em diversas tecnologias, como Scratch, TypeScript etc. por mais de 5 anos."
           name="Ernie and Bert"
         />
       </section>
