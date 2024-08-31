@@ -1,25 +1,25 @@
 import "./style.css";
 
 interface ProjectProps {
-  title: string;
+  name: string;
   description: string;
-  tecnologies: string[];
+  technologies: string[];
   link?: string;
 }
 
 export function Project({
-  title,
+  name,
   description,
-  tecnologies,
+  technologies,
   link,
 }: ProjectProps) {
   return (
     <article className="project">
-      <h3>{title}</h3>
+      <h3>{name}</h3>
       <p>{description}</p>
       <ul>
-        {tecnologies.map((tecnology, index) => (
-          <li key={index}>{tecnology}</li>
+        {technologies.map((technology, index) => (
+          <li key={index}>{technology}</li>
         ))}
       </ul>
       {link && (

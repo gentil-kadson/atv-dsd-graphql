@@ -1,6 +1,6 @@
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 
 export const client = new ApolloClient({
-  uri: "https://flyby-router-demo.herokuapp.com/", // Atualize com a URL da sua API GraphQL
+  uri: "http://192.168.0.104:8080/query", // Atualize com a URL da sua API GraphQL
   cache: new InMemoryCache(),
 });
