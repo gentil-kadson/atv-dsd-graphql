@@ -22,7 +22,7 @@ func main() {
 	// Add CORS middleware around every request
 	// See https://github.com/rs/cors for full option listing
 	router.Use(cors.New(cors.Options{
-		AllowedOrigins: []string{"http://localhost:5173"},
+		AllowedOrigins: []string{"http://localhost:5173", "http://192.168.0.104:8080", "http://localhost:8080"},
 		AllowCredentials: true,
 		Debug: true,
 	}).Handler)
@@ -46,7 +46,7 @@ func main() {
 	router.Handle("/", playground.Handler("GraphQL playground", "/query"))
 	router.Handle("/query", srv)
 
-	log.Printf("connect to http://192.168.0.104:%s/ for GraphQL playground", port)
+	log.Printf("connect to http://localhost:%s/ for GraphQL playground", port)
 	err := http.ListenAndServe(":"+port, router)
 	if err != nil {
 		panic(err)
