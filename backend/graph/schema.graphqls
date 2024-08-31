@@ -1,0 +1,26 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+type Project {
+  id: ID!
+  name: String!
+  description: String!
+  technologies: [String!]!
+  link: String
+}
+
+input NewProject {
+  name: String!
+  description: String!
+  technologies: [String!]!
+  link: String
+}
+
+type Mutation {
+  addProject(project: NewProject!): Project!
+}
+
+type Query {
+  getProjects: [Project]!
+}
